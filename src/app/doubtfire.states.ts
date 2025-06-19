@@ -271,6 +271,21 @@ const ProjectDashboardState: NgHybridStateDeclaration = {
   },
 };
 
+const ProjectDashboardStateV1: NgHybridStateDeclaration = {
+  name: 'dashboard',
+  parent: 'projects',
+  url: '/dashboard',
+  views: {
+    projectView: {
+      component: ProjectDashboardComponent,  // <-- Your new Angular Component
+    },
+  },
+  data: {
+    pageTitle: 'Unit Dashboard',
+  },
+};
+
+
 const ViewAllUnits: NgHybridStateDeclaration = {
   name: 'view-all-units',
   url: '/view-all-units',
@@ -428,6 +443,7 @@ export const doubtfireStates = [
   UnauthoriedState,
   ProjectRootState,
   ProjectDashboardState,
+  ProjectDashboardStateV1,
   UnitRootState,
   TaskViewerState,
   ScormPlayerNormalState,
